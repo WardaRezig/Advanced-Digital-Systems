@@ -1,0 +1,15 @@
+
+State Machine - |ssd|PS
+Name PS.fa PS.f PS.ef PS.e PS.de PS.d PS.cd PS.c PS.bc PS.b PS.ab PS.a 
+PS.a 0 0 0 0 0 0 0 0 0 0 0 0 
+PS.ab 0 0 0 0 0 0 0 0 0 0 1 1 
+PS.b 0 0 0 0 0 0 0 0 0 1 0 1 
+PS.bc 0 0 0 0 0 0 0 0 1 0 0 1 
+PS.c 0 0 0 0 0 0 0 1 0 0 0 1 
+PS.cd 0 0 0 0 0 0 1 0 0 0 0 1 
+PS.d 0 0 0 0 0 1 0 0 0 0 0 1 
+PS.de 0 0 0 0 1 0 0 0 0 0 0 1 
+PS.e 0 0 0 1 0 0 0 0 0 0 0 1 
+PS.ef 0 0 1 0 0 0 0 0 0 0 0 1 
+PS.f 0 1 0 0 0 0 0 0 0 0 0 1 
+PS.fa 1 0 0 0 0 0 0 0 0 0 0 1 

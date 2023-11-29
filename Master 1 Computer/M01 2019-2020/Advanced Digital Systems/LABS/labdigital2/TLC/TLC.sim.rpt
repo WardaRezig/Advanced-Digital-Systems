@@ -1,0 +1,414 @@
+Simulator report for TLC
+Mon Dec 09 18:34:33 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 144 nodes    ;
+; Simulation Coverage         ;      21.53 % ;
+; Total Number of Transitions ; 690          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Vector input source                                                                        ; TLC.vwf    ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      21.53 % ;
+; Total nodes checked                                 ; 144          ;
+; Total output ports checked                          ; 144          ;
+; Total output ports with complete 1/0-value coverage ; 31           ;
+; Total output ports with no 1/0-value coverage       ; 107          ;
+; Total output ports with no 1-value coverage         ; 107          ;
+; Total output ports with no 0-value coverage         ; 113          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------+
+; Complete 1/0-Value Coverage                          ;
++----------------+------------------+------------------+
+; Node Name      ; Output Port Name ; Output Port Type ;
++----------------+------------------+------------------+
+; |TLC|state~19  ; |TLC|state~19    ; out              ;
+; |TLC|state~20  ; |TLC|state~20    ; out              ;
+; |TLC|state~21  ; |TLC|state~21    ; out              ;
+; |TLC|state~22  ; |TLC|state~22    ; out              ;
+; |TLC|state~23  ; |TLC|state~23    ; out              ;
+; |TLC|state~24  ; |TLC|state~24    ; out              ;
+; |TLC|state~25  ; |TLC|state~25    ; out              ;
+; |TLC|state[4]  ; |TLC|state[4]    ; regout           ;
+; |TLC|state[3]  ; |TLC|state[3]    ; regout           ;
+; |TLC|state[2]  ; |TLC|state[2]    ; regout           ;
+; |TLC|state[1]  ; |TLC|state[1]    ; regout           ;
+; |TLC|Q~1       ; |TLC|Q~1         ; out              ;
+; |TLC|Q~2       ; |TLC|Q~2         ; out              ;
+; |TLC|state[0]  ; |TLC|state[0]    ; regout           ;
+; |TLC|Q[0]~reg0 ; |TLC|Q[0]~reg0   ; regout           ;
+; |TLC|CLOCK     ; |TLC|CLOCK       ; out              ;
+; |TLC|Q[0]      ; |TLC|Q[0]        ; pin_out          ;
+; |TLC|PS~4      ; |TLC|PS~4        ; out0             ;
+; |TLC|PS~9      ; |TLC|PS~9        ; out0             ;
+; |TLC|Add0~0    ; |TLC|Add0~0      ; out0             ;
+; |TLC|Add0~1    ; |TLC|Add0~1      ; out0             ;
+; |TLC|Add0~2    ; |TLC|Add0~2      ; out0             ;
+; |TLC|Add0~3    ; |TLC|Add0~3      ; out0             ;
+; |TLC|Add0~4    ; |TLC|Add0~4      ; out0             ;
+; |TLC|Add0~5    ; |TLC|Add0~5      ; out0             ;
+; |TLC|Add0~6    ; |TLC|Add0~6      ; out0             ;
+; |TLC|Add0~7    ; |TLC|Add0~7      ; out0             ;
+; |TLC|Add0~8    ; |TLC|Add0~8      ; out0             ;
+; |TLC|Add0~9    ; |TLC|Add0~9      ; out0             ;
+; |TLC|Add0~10   ; |TLC|Add0~10     ; out0             ;
+; |TLC|Add1~0    ; |TLC|Add1~0      ; out0             ;
++----------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------+
+; Missing 1-Value Coverage                               ;
++------------------+------------------+------------------+
+; Node Name        ; Output Port Name ; Output Port Type ;
++------------------+------------------+------------------+
+; |TLC|state~0     ; |TLC|state~0     ; out              ;
+; |TLC|state~1     ; |TLC|state~1     ; out              ;
+; |TLC|state~2     ; |TLC|state~2     ; out              ;
+; |TLC|state~3     ; |TLC|state~3     ; out              ;
+; |TLC|state~4     ; |TLC|state~4     ; out              ;
+; |TLC|state~5     ; |TLC|state~5     ; out              ;
+; |TLC|state~6     ; |TLC|state~6     ; out              ;
+; |TLC|state~7     ; |TLC|state~7     ; out              ;
+; |TLC|state~8     ; |TLC|state~8     ; out              ;
+; |TLC|state~9     ; |TLC|state~9     ; out              ;
+; |TLC|state~10    ; |TLC|state~10    ; out              ;
+; |TLC|state~11    ; |TLC|state~11    ; out              ;
+; |TLC|state~12    ; |TLC|state~12    ; out              ;
+; |TLC|state~13    ; |TLC|state~13    ; out              ;
+; |TLC|state~14    ; |TLC|state~14    ; out              ;
+; |TLC|state~15    ; |TLC|state~15    ; out              ;
+; |TLC|state~16    ; |TLC|state~16    ; out              ;
+; |TLC|state~17    ; |TLC|state~17    ; out              ;
+; |TLC|state~18    ; |TLC|state~18    ; out              ;
+; |TLC|state[25]   ; |TLC|state[25]   ; regout           ;
+; |TLC|state[24]   ; |TLC|state[24]   ; regout           ;
+; |TLC|state[23]   ; |TLC|state[23]   ; regout           ;
+; |TLC|state[22]   ; |TLC|state[22]   ; regout           ;
+; |TLC|state[21]   ; |TLC|state[21]   ; regout           ;
+; |TLC|state[20]   ; |TLC|state[20]   ; regout           ;
+; |TLC|state[19]   ; |TLC|state[19]   ; regout           ;
+; |TLC|state[18]   ; |TLC|state[18]   ; regout           ;
+; |TLC|state[17]   ; |TLC|state[17]   ; regout           ;
+; |TLC|state[16]   ; |TLC|state[16]   ; regout           ;
+; |TLC|state[15]   ; |TLC|state[15]   ; regout           ;
+; |TLC|state[14]   ; |TLC|state[14]   ; regout           ;
+; |TLC|state[13]   ; |TLC|state[13]   ; regout           ;
+; |TLC|state[12]   ; |TLC|state[12]   ; regout           ;
+; |TLC|state[11]   ; |TLC|state[11]   ; regout           ;
+; |TLC|state[10]   ; |TLC|state[10]   ; regout           ;
+; |TLC|state[9]    ; |TLC|state[9]    ; regout           ;
+; |TLC|state[8]    ; |TLC|state[8]    ; regout           ;
+; |TLC|state[7]    ; |TLC|state[7]    ; regout           ;
+; |TLC|state[6]    ; |TLC|state[6]    ; regout           ;
+; |TLC|Q[2]~reg0   ; |TLC|Q[2]~reg0   ; regout           ;
+; |TLC|PS~0        ; |TLC|PS~0        ; out0             ;
+; |TLC|PS~1        ; |TLC|PS~1        ; out              ;
+; |TLC|PS~2        ; |TLC|PS~2        ; out0             ;
+; |TLC|PS~3        ; |TLC|PS~3        ; out              ;
+; |TLC|PS.s0       ; |TLC|PS.s0       ; regout           ;
+; |TLC|PS.s1       ; |TLC|PS.s1       ; regout           ;
+; |TLC|PS.s2       ; |TLC|PS.s2       ; regout           ;
+; |TLC|NSEW~0      ; |TLC|NSEW~0      ; out0             ;
+; |TLC|PS.s3       ; |TLC|PS.s3       ; regout           ;
+; |TLC|RESET       ; |TLC|RESET       ; out              ;
+; |TLC|Q[2]        ; |TLC|Q[2]        ; pin_out          ;
+; |TLC|NS[0]       ; |TLC|NS[0]       ; pin_out          ;
+; |TLC|NS[1]       ; |TLC|NS[1]       ; pin_out          ;
+; |TLC|NS[2]       ; |TLC|NS[2]       ; pin_out          ;
+; |TLC|EW[0]       ; |TLC|EW[0]       ; pin_out          ;
+; |TLC|EW[1]       ; |TLC|EW[1]       ; pin_out          ;
+; |TLC|EW[2]       ; |TLC|EW[2]       ; pin_out          ;
+; |TLC|PS~5        ; |TLC|PS~5        ; out0             ;
+; |TLC|EW[0]~0     ; |TLC|EW[0]~0     ; out0             ;
+; |TLC|PS.s1~0     ; |TLC|PS.s1~0     ; out0             ;
+; |TLC|EW[1]~1     ; |TLC|EW[1]~1     ; out0             ;
+; |TLC|NS[0]~0     ; |TLC|NS[0]~0     ; out0             ;
+; |TLC|PS.s3~0     ; |TLC|PS.s3~0     ; out0             ;
+; |TLC|NS[1]~1     ; |TLC|NS[1]~1     ; out0             ;
+; |TLC|PS~13       ; |TLC|PS~13       ; out0             ;
+; |TLC|Selector0~0 ; |TLC|Selector0~0 ; out0             ;
+; |TLC|Selector1~0 ; |TLC|Selector1~0 ; out0             ;
+; |TLC|Add0~11     ; |TLC|Add0~11     ; out0             ;
+; |TLC|Add0~12     ; |TLC|Add0~12     ; out0             ;
+; |TLC|Add0~13     ; |TLC|Add0~13     ; out0             ;
+; |TLC|Add0~14     ; |TLC|Add0~14     ; out0             ;
+; |TLC|Add0~15     ; |TLC|Add0~15     ; out0             ;
+; |TLC|Add0~16     ; |TLC|Add0~16     ; out0             ;
+; |TLC|Add0~17     ; |TLC|Add0~17     ; out0             ;
+; |TLC|Add0~18     ; |TLC|Add0~18     ; out0             ;
+; |TLC|Add0~19     ; |TLC|Add0~19     ; out0             ;
+; |TLC|Add0~20     ; |TLC|Add0~20     ; out0             ;
+; |TLC|Add0~21     ; |TLC|Add0~21     ; out0             ;
+; |TLC|Add0~22     ; |TLC|Add0~22     ; out0             ;
+; |TLC|Add0~23     ; |TLC|Add0~23     ; out0             ;
+; |TLC|Add0~24     ; |TLC|Add0~24     ; out0             ;
+; |TLC|Add0~25     ; |TLC|Add0~25     ; out0             ;
+; |TLC|Add0~26     ; |TLC|Add0~26     ; out0             ;
+; |TLC|Add0~27     ; |TLC|Add0~27     ; out0             ;
+; |TLC|Add0~28     ; |TLC|Add0~28     ; out0             ;
+; |TLC|Add0~29     ; |TLC|Add0~29     ; out0             ;
+; |TLC|Add0~30     ; |TLC|Add0~30     ; out0             ;
+; |TLC|Add0~31     ; |TLC|Add0~31     ; out0             ;
+; |TLC|Add0~32     ; |TLC|Add0~32     ; out0             ;
+; |TLC|Add0~33     ; |TLC|Add0~33     ; out0             ;
+; |TLC|Add0~34     ; |TLC|Add0~34     ; out0             ;
+; |TLC|Add0~35     ; |TLC|Add0~35     ; out0             ;
+; |TLC|Add0~36     ; |TLC|Add0~36     ; out0             ;
+; |TLC|Add0~37     ; |TLC|Add0~37     ; out0             ;
+; |TLC|Add0~38     ; |TLC|Add0~38     ; out0             ;
+; |TLC|Add0~39     ; |TLC|Add0~39     ; out0             ;
+; |TLC|Add0~40     ; |TLC|Add0~40     ; out0             ;
+; |TLC|Add0~41     ; |TLC|Add0~41     ; out0             ;
+; |TLC|Add0~42     ; |TLC|Add0~42     ; out0             ;
+; |TLC|Add0~43     ; |TLC|Add0~43     ; out0             ;
+; |TLC|Add0~44     ; |TLC|Add0~44     ; out0             ;
+; |TLC|Add0~45     ; |TLC|Add0~45     ; out0             ;
+; |TLC|Add0~46     ; |TLC|Add0~46     ; out0             ;
+; |TLC|Add0~47     ; |TLC|Add0~47     ; out0             ;
+; |TLC|Add0~48     ; |TLC|Add0~48     ; out0             ;
+; |TLC|Equal0~0    ; |TLC|Equal0~0    ; out0             ;
+; |TLC|Equal1~0    ; |TLC|Equal1~0    ; out0             ;
++------------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------+
+; Missing 0-Value Coverage                               ;
++------------------+------------------+------------------+
+; Node Name        ; Output Port Name ; Output Port Type ;
++------------------+------------------+------------------+
+; |TLC|state~0     ; |TLC|state~0     ; out              ;
+; |TLC|state~1     ; |TLC|state~1     ; out              ;
+; |TLC|state~2     ; |TLC|state~2     ; out              ;
+; |TLC|state~3     ; |TLC|state~3     ; out              ;
+; |TLC|state~4     ; |TLC|state~4     ; out              ;
+; |TLC|state~5     ; |TLC|state~5     ; out              ;
+; |TLC|state~6     ; |TLC|state~6     ; out              ;
+; |TLC|state~7     ; |TLC|state~7     ; out              ;
+; |TLC|state~8     ; |TLC|state~8     ; out              ;
+; |TLC|state~9     ; |TLC|state~9     ; out              ;
+; |TLC|state~10    ; |TLC|state~10    ; out              ;
+; |TLC|state~11    ; |TLC|state~11    ; out              ;
+; |TLC|state~12    ; |TLC|state~12    ; out              ;
+; |TLC|state~13    ; |TLC|state~13    ; out              ;
+; |TLC|state~14    ; |TLC|state~14    ; out              ;
+; |TLC|state~15    ; |TLC|state~15    ; out              ;
+; |TLC|state~16    ; |TLC|state~16    ; out              ;
+; |TLC|state~17    ; |TLC|state~17    ; out              ;
+; |TLC|state~18    ; |TLC|state~18    ; out              ;
+; |TLC|state[25]   ; |TLC|state[25]   ; regout           ;
+; |TLC|state[24]   ; |TLC|state[24]   ; regout           ;
+; |TLC|state[23]   ; |TLC|state[23]   ; regout           ;
+; |TLC|state[22]   ; |TLC|state[22]   ; regout           ;
+; |TLC|state[21]   ; |TLC|state[21]   ; regout           ;
+; |TLC|state[20]   ; |TLC|state[20]   ; regout           ;
+; |TLC|state[19]   ; |TLC|state[19]   ; regout           ;
+; |TLC|state[18]   ; |TLC|state[18]   ; regout           ;
+; |TLC|state[17]   ; |TLC|state[17]   ; regout           ;
+; |TLC|state[16]   ; |TLC|state[16]   ; regout           ;
+; |TLC|state[15]   ; |TLC|state[15]   ; regout           ;
+; |TLC|state[14]   ; |TLC|state[14]   ; regout           ;
+; |TLC|state[13]   ; |TLC|state[13]   ; regout           ;
+; |TLC|state[12]   ; |TLC|state[12]   ; regout           ;
+; |TLC|state[11]   ; |TLC|state[11]   ; regout           ;
+; |TLC|state[10]   ; |TLC|state[10]   ; regout           ;
+; |TLC|state[9]    ; |TLC|state[9]    ; regout           ;
+; |TLC|state[8]    ; |TLC|state[8]    ; regout           ;
+; |TLC|state[7]    ; |TLC|state[7]    ; regout           ;
+; |TLC|state[6]    ; |TLC|state[6]    ; regout           ;
+; |TLC|state[5]    ; |TLC|state[5]    ; regout           ;
+; |TLC|Q~0         ; |TLC|Q~0         ; out              ;
+; |TLC|Q[2]~reg0   ; |TLC|Q[2]~reg0   ; regout           ;
+; |TLC|Q[1]~reg0   ; |TLC|Q[1]~reg0   ; regout           ;
+; |TLC|PS~0        ; |TLC|PS~0        ; out0             ;
+; |TLC|PS~1        ; |TLC|PS~1        ; out              ;
+; |TLC|PS~2        ; |TLC|PS~2        ; out0             ;
+; |TLC|PS~3        ; |TLC|PS~3        ; out              ;
+; |TLC|PS.s0       ; |TLC|PS.s0       ; regout           ;
+; |TLC|PS.s1       ; |TLC|PS.s1       ; regout           ;
+; |TLC|PS.s2       ; |TLC|PS.s2       ; regout           ;
+; |TLC|NSEW~0      ; |TLC|NSEW~0      ; out0             ;
+; |TLC|PS.s3       ; |TLC|PS.s3       ; regout           ;
+; |TLC|RESET       ; |TLC|RESET       ; out              ;
+; |TLC|Q[1]        ; |TLC|Q[1]        ; pin_out          ;
+; |TLC|Q[2]        ; |TLC|Q[2]        ; pin_out          ;
+; |TLC|NS[0]       ; |TLC|NS[0]       ; pin_out          ;
+; |TLC|NS[1]       ; |TLC|NS[1]       ; pin_out          ;
+; |TLC|NS[2]       ; |TLC|NS[2]       ; pin_out          ;
+; |TLC|EW[0]       ; |TLC|EW[0]       ; pin_out          ;
+; |TLC|EW[1]       ; |TLC|EW[1]       ; pin_out          ;
+; |TLC|EW[2]       ; |TLC|EW[2]       ; pin_out          ;
+; |TLC|PS~5        ; |TLC|PS~5        ; out0             ;
+; |TLC|EW[0]~0     ; |TLC|EW[0]~0     ; out0             ;
+; |TLC|PS.s1~0     ; |TLC|PS.s1~0     ; out0             ;
+; |TLC|EW[1]~1     ; |TLC|EW[1]~1     ; out0             ;
+; |TLC|NS[0]~0     ; |TLC|NS[0]~0     ; out0             ;
+; |TLC|PS.s3~0     ; |TLC|PS.s3~0     ; out0             ;
+; |TLC|NS[1]~1     ; |TLC|NS[1]~1     ; out0             ;
+; |TLC|PS~13       ; |TLC|PS~13       ; out0             ;
+; |TLC|Selector0~0 ; |TLC|Selector0~0 ; out0             ;
+; |TLC|Selector1~0 ; |TLC|Selector1~0 ; out0             ;
+; |TLC|Add0~11     ; |TLC|Add0~11     ; out0             ;
+; |TLC|Add0~12     ; |TLC|Add0~12     ; out0             ;
+; |TLC|Add0~13     ; |TLC|Add0~13     ; out0             ;
+; |TLC|Add0~14     ; |TLC|Add0~14     ; out0             ;
+; |TLC|Add0~15     ; |TLC|Add0~15     ; out0             ;
+; |TLC|Add0~16     ; |TLC|Add0~16     ; out0             ;
+; |TLC|Add0~17     ; |TLC|Add0~17     ; out0             ;
+; |TLC|Add0~18     ; |TLC|Add0~18     ; out0             ;
+; |TLC|Add0~19     ; |TLC|Add0~19     ; out0             ;
+; |TLC|Add0~20     ; |TLC|Add0~20     ; out0             ;
+; |TLC|Add0~21     ; |TLC|Add0~21     ; out0             ;
+; |TLC|Add0~22     ; |TLC|Add0~22     ; out0             ;
+; |TLC|Add0~23     ; |TLC|Add0~23     ; out0             ;
+; |TLC|Add0~24     ; |TLC|Add0~24     ; out0             ;
+; |TLC|Add0~25     ; |TLC|Add0~25     ; out0             ;
+; |TLC|Add0~26     ; |TLC|Add0~26     ; out0             ;
+; |TLC|Add0~27     ; |TLC|Add0~27     ; out0             ;
+; |TLC|Add0~28     ; |TLC|Add0~28     ; out0             ;
+; |TLC|Add0~29     ; |TLC|Add0~29     ; out0             ;
+; |TLC|Add0~30     ; |TLC|Add0~30     ; out0             ;
+; |TLC|Add0~31     ; |TLC|Add0~31     ; out0             ;
+; |TLC|Add0~32     ; |TLC|Add0~32     ; out0             ;
+; |TLC|Add0~33     ; |TLC|Add0~33     ; out0             ;
+; |TLC|Add0~34     ; |TLC|Add0~34     ; out0             ;
+; |TLC|Add0~35     ; |TLC|Add0~35     ; out0             ;
+; |TLC|Add0~36     ; |TLC|Add0~36     ; out0             ;
+; |TLC|Add0~37     ; |TLC|Add0~37     ; out0             ;
+; |TLC|Add0~38     ; |TLC|Add0~38     ; out0             ;
+; |TLC|Add0~39     ; |TLC|Add0~39     ; out0             ;
+; |TLC|Add0~40     ; |TLC|Add0~40     ; out0             ;
+; |TLC|Add0~41     ; |TLC|Add0~41     ; out0             ;
+; |TLC|Add0~42     ; |TLC|Add0~42     ; out0             ;
+; |TLC|Add0~43     ; |TLC|Add0~43     ; out0             ;
+; |TLC|Add0~44     ; |TLC|Add0~44     ; out0             ;
+; |TLC|Add0~45     ; |TLC|Add0~45     ; out0             ;
+; |TLC|Add0~46     ; |TLC|Add0~46     ; out0             ;
+; |TLC|Add0~47     ; |TLC|Add0~47     ; out0             ;
+; |TLC|Add0~48     ; |TLC|Add0~48     ; out0             ;
+; |TLC|Add1~1      ; |TLC|Add1~1      ; out0             ;
+; |TLC|Add1~2      ; |TLC|Add1~2      ; out0             ;
+; |TLC|Equal0~0    ; |TLC|Equal0~0    ; out0             ;
+; |TLC|Equal1~0    ; |TLC|Equal1~0    ; out0             ;
++------------------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Dec 09 18:34:33 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off TLC -c TLC
+Info: Using vector source file "C:/labdigital2/TLC/TLC.vwf"
+Warning: Wrong node type and/or width for node "|TLC|PS" in vector source file. Node in design is of type Enum and of width 1, but node in vector source file is of type 9-Level and of width 1.
+Warning: Signal name "|TLC|PS" changed to enum type
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      21.53 %
+Info: Number of transitions in simulation is 690
+Info: Quartus II Simulator was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 158 megabytes
+    Info: Processing ended: Mon Dec 09 18:34:33 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

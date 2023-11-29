@@ -1,0 +1,18 @@
+|Lab_1
+clk => PS~1.DATAIN
+rst => PS~3.DATAIN
+w => Selector5.IN1
+w => Selector0.IN2
+w => Selector0.IN3
+w => Selector0.IN4
+w => Selector0.IN5
+w => Selector1.IN4
+w => Selector1.IN5
+w => Selector2.IN3
+w => Selector2.IN4
+w => Selector2.IN5
+w => Selector3.IN0
+w => Selector4.IN0
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

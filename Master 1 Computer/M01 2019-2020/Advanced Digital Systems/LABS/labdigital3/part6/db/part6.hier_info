@@ -1,0 +1,33 @@
+|part6
+rst => count~0.IN1
+right_s => Equal0.IN4
+right_s => Mux2.IN9
+right_s => Mux3.IN9
+right_s => Mux4.IN9
+right_s => Mux5.IN9
+right_s => Mux6.IN9
+right_s => Mux7.IN9
+left_s => Equal0.IN5
+left_s => Mux2.IN10
+left_s => Mux3.IN10
+left_s => Mux4.IN10
+left_s => Mux5.IN10
+left_s => Mux6.IN10
+left_s => Mux7.IN10
+hazard => Equal0.IN3
+hazard => Mux2.IN8
+hazard => Mux3.IN8
+hazard => Mux4.IN8
+hazard => Mux5.IN8
+hazard => Mux6.IN8
+hazard => Mux7.IN8
+clk => counter[0].CLK
+clk => counter[1].CLK
+D_out[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+D_out[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+D_out[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+D_out[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+D_out[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+D_out[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+
+

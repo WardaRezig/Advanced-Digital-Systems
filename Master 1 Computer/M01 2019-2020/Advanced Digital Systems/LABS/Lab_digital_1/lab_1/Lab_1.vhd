@@ -1,0 +1,49 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Lab_1 is
+	port(
+		clk, rst, w: IN std_logic;
+		y: OUT std_logic
+	);
+end Lab_1;
+
+architecture behave of Lab_1 is
+Type state_type is (S0, S1, S2, S3, S4, S5);
+signal PS: state_type;
+begin
+trans: process(clk, rst)
+	begin
+	if(rst='1') then
+	PS <= S0;
+	elsif(clk'event and clk = '1') then
+	case PS is
+	when S0 => if w = '1' then PS <= S0;
+			   elsif w = '0' then PS <= S1;
+			   end if;
+	when S1 => if w = '1' then PS <= S0;
+			   elsif w = '0' then PS <= S2;
+			   end if;
+	when S2 => if w = '1' then PS <= S3;
+			   elsif w = '0' then PS <= S2;
+			   end if;
+	when S3 => if w = '1' then PS <= S0;
+			   elsif w = '0' then PS <= S4;
+			   end if;
+	when S4 => if w = '1' then PS <= S5;
+			   elsif w = '0' then PS <= S2;
+			   end if;
+	when S5 => if w = '1' then PS <= S0;
+			   elsif w = '0' then PS <= S1;
+			   end if;
+	end case;
+	end if;
+end process trans;
+out_put: process(PS)
+	begin
+	case PS is
+	when S5 => y <= '1';
+	when others => y <= '0';
+	end case;
+end process out_put;
+end behave;

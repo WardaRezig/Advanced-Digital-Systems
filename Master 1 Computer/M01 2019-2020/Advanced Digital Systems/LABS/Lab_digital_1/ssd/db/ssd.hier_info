@@ -1,0 +1,18 @@
+|ssd
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => PS~13.DATAIN
+stop => PS~15.DATAIN
+stop => counter[2].ENA
+stop => counter[1].ENA
+stop => counter[0].ENA
+dout[0] <= dout.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5].DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,41 @@
+|T_BIRDS
+haz => d~12.OUTPUTSELECT
+haz => d~13.OUTPUTSELECT
+haz => d~14.OUTPUTSELECT
+haz => d~15.OUTPUTSELECT
+haz => d~16.OUTPUTSELECT
+haz => d~17.OUTPUTSELECT
+rst => d[0].ACLR
+rst => d[1].ACLR
+rst => d[2].ACLR
+rst => d[3].ACLR
+rst => d[4].ACLR
+rst => d[5].ACLR
+clk => d[0].CLK
+clk => d[1].CLK
+clk => d[2].CLK
+clk => d[3].CLK
+clk => d[4].CLK
+clk => d[5].CLK
+left_s => process_0~0.IN0
+left_s => d~6.OUTPUTSELECT
+left_s => d~7.OUTPUTSELECT
+left_s => d~8.OUTPUTSELECT
+left_s => d~9.OUTPUTSELECT
+left_s => d~10.OUTPUTSELECT
+left_s => d~11.OUTPUTSELECT
+right_s => process_0~0.IN1
+right_s => d~0.OUTPUTSELECT
+right_s => d~1.OUTPUTSELECT
+right_s => d~2.OUTPUTSELECT
+right_s => d~3.OUTPUTSELECT
+right_s => d~4.OUTPUTSELECT
+right_s => d~5.OUTPUTSELECT
+Dout[0] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= d[3].DB_MAX_OUTPUT_PORT_TYPE
+Dout[4] <= d[4].DB_MAX_OUTPUT_PORT_TYPE
+Dout[5] <= d[5].DB_MAX_OUTPUT_PORT_TYPE
+
+

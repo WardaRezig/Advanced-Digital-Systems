@@ -1,0 +1,7 @@
+
+State Machine - |TLC|PS
+Name PS.s3 PS.s2 PS.s1 PS.s0 
+PS.s0 0 0 0 0 
+PS.s1 0 0 1 1 
+PS.s2 0 1 0 1 
+PS.s3 1 0 0 1 

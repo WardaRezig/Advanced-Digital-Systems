@@ -1,0 +1,60 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity fsm_2 is
+port ( clk, rst, w : in std_logic ;
+        y          : out std_logic);
+        
+      end  entity ;
+ Architecture behavioral of fsm_2 is
+ Type state_type  is (S0, S1, S2, S3, S4);
+ signal PS : state_type ;
+ begin
+ transition : PROCESS(rst,clk)
+              Begin
+              if rst='1' then PS <= s0;
+              Elsif (clk' event and clk = '1') then
+
+              case PS is
+                              
+when S0=> if (w='1') then PS<= S1 ;
+          else PS <=S0;
+          end if;                              
+                              
+when S1=> if (w='0') then PS<= S2 ;
+          else PS<= S1;
+          end if;
+          
+when S2=> if (w='1') then PS<= S3 ;
+          else PS<= S0;
+          end if;
+
+when S3=> if (w='1') then PS<= S4 ;
+          else PS<= S2;
+          end if;
+
+when S4=> if (w='0') then PS<= S2 ;
+          else PS<= S1 ;
+          end if;
+          
+          end case;
+          end if; 
+          End PROCESS transition;       
+         
+   
+         out_put:       PROCESS(PS, w)
+                        Begin       
+              case PS is
+              when S4 => 
+              if (w='0') then y <= '1';
+              else y <= '0';
+              end if;
+              when others => y <='0';
+              end case;
+              end PROCESS out_put ;
+              
+ end behavioral;             
+                           
+                              
+                                            
+                              
+      

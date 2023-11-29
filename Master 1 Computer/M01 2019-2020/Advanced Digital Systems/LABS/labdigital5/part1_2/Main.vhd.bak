@@ -1,0 +1,66 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+Entity main is 
+port(inp : in std_logic_vector(7 downto 0);
+	 parity_bit : out std_logic;
+     numOfOnes : out integer range 0 to 255;
+     bytetointeger: out integer range -255 to 255;
+     trailingzeros: out integer range 0 to 7
+	); 
+	end main;
+
+
+Architecture arch of main is 
+	
+			Function parity (data: std_logic_vector) return std_logic is 
+			variable y: std_logic :='0';
+			begin 
+				For i in data'Range Loop
+				y := y xor data(i);
+				end Loop;
+				return y;
+			end parity;
+			
+			function NumberOfOnes(data : std_logic_vector) return integer is 
+		    variable x : integer range 0 to 255 ; 
+		    begin 
+				for i in data'Range loop
+				if(data(i)='1') then x:= (x+1);
+				end if;	
+				end loop;
+				return x;
+	        end NumberOfOnes;
+	        
+	        function Byte_to_int(data: std_logic_vector(7 downto 0)) return integer is 
+			variable y: integer range -255 to 255:=0;
+			begin 
+	
+				for i in data'Range loop
+				if(data(i)='1') then y:= (y+(2**i));
+				end if;
+				end loop;
+				return y;
+			end  Byte_to_int;
+			
+			function trailing_zeros(data: std_logic_vector(7 downto 0)) return integer is 
+			variable y: integer range 0 to 8:=0;
+			begin 
+	
+				for i in data'reverse_range loop
+				case data(i) is 
+				when '0' => y:= y+1;
+				when others => exit;
+				end case;
+				end loop;
+				return y;
+			end  trailing_zeros;
+			
+	
+	        
+begin
+parity_bit <= parity(inp);
+numOfOnes <= NumberOfOnes(inp);
+bytetointeger <= Byte_to_int(inp);
+trailingzeros<= trailing_zeros(inp);
+end arch;

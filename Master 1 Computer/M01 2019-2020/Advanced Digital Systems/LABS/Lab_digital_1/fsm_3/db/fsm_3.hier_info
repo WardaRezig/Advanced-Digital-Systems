@@ -1,0 +1,13 @@
+|fsm_3
+clk => PS~1.DATAIN
+rst => PS~3.DATAIN
+w => PS.DATAB
+w => PS.DATAB
+w => PS.DATAB
+w => Selector0.IN1
+w => PS.DATAB
+w => Selector1.IN2
+w => Selector1.IN3
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

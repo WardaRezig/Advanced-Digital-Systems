@@ -1,0 +1,250 @@
+Simulator report for ssd
+Sun Dec 01 12:54:04 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 82 nodes     ;
+; Simulation Coverage         ;      79.27 % ;
+; Total Number of Transitions ; 791          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Vector input source                                                                        ; ssd.vwf    ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      79.27 % ;
+; Total nodes checked                                 ; 82           ;
+; Total output ports checked                          ; 82           ;
+; Total output ports with complete 1/0-value coverage ; 65           ;
+; Total output ports with no 1/0-value coverage       ; 6            ;
+; Total output ports with no 1-value coverage         ; 12           ;
+; Total output ports with no 0-value coverage         ; 11           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------------+
+; Complete 1/0-Value Coverage                           ;
++-----------------+------------------+------------------+
+; Node Name       ; Output Port Name ; Output Port Type ;
++-----------------+------------------+------------------+
+; |ssd|one~0      ; |ssd|one~0       ; out0             ;
+; |ssd|one~1      ; |ssd|one~1       ; out0             ;
+; |ssd|one~2      ; |ssd|one~2       ; out0             ;
+; |ssd|counter~0  ; |ssd|counter~0   ; out              ;
+; |ssd|counter~1  ; |ssd|counter~1   ; out              ;
+; |ssd|counter~2  ; |ssd|counter~2   ; out              ;
+; |ssd|PS~1       ; |ssd|PS~1        ; out              ;
+; |ssd|PS~2       ; |ssd|PS~2        ; out              ;
+; |ssd|PS~3       ; |ssd|PS~3        ; out              ;
+; |ssd|PS~4       ; |ssd|PS~4        ; out              ;
+; |ssd|PS~5       ; |ssd|PS~5        ; out              ;
+; |ssd|PS~6       ; |ssd|PS~6        ; out              ;
+; |ssd|PS~7       ; |ssd|PS~7        ; out              ;
+; |ssd|PS~8       ; |ssd|PS~8        ; out              ;
+; |ssd|PS~9       ; |ssd|PS~9        ; out              ;
+; |ssd|PS~10      ; |ssd|PS~10       ; out              ;
+; |ssd|PS.ab      ; |ssd|PS.ab       ; regout           ;
+; |ssd|PS.b       ; |ssd|PS.b        ; regout           ;
+; |ssd|PS.bc      ; |ssd|PS.bc       ; regout           ;
+; |ssd|PS.c       ; |ssd|PS.c        ; regout           ;
+; |ssd|PS.cd      ; |ssd|PS.cd       ; regout           ;
+; |ssd|PS.d       ; |ssd|PS.d        ; regout           ;
+; |ssd|PS.de      ; |ssd|PS.de       ; regout           ;
+; |ssd|PS.e       ; |ssd|PS.e        ; regout           ;
+; |ssd|counter[2] ; |ssd|counter[2]  ; regout           ;
+; |ssd|counter[1] ; |ssd|counter[1]  ; regout           ;
+; |ssd|dout~1     ; |ssd|dout~1      ; out0             ;
+; |ssd|WideOr1    ; |ssd|WideOr1     ; out0             ;
+; |ssd|WideOr2    ; |ssd|WideOr2     ; out0             ;
+; |ssd|WideOr3    ; |ssd|WideOr3     ; out0             ;
+; |ssd|WideOr4    ; |ssd|WideOr4     ; out0             ;
+; |ssd|counter[0] ; |ssd|counter[0]  ; regout           ;
+; |ssd|clk        ; |ssd|clk         ; out              ;
+; |ssd|stop       ; |ssd|stop        ; out              ;
+; |ssd|dout[1]    ; |ssd|dout[1]     ; pin_out          ;
+; |ssd|dout[2]    ; |ssd|dout[2]     ; pin_out          ;
+; |ssd|dout[3]    ; |ssd|dout[3]     ; pin_out          ;
+; |ssd|dout[4]    ; |ssd|dout[4]     ; pin_out          ;
+; |ssd|PS~12      ; |ssd|PS~12       ; out0             ;
+; |ssd|PS~13      ; |ssd|PS~13       ; out0             ;
+; |ssd|PS.ab~0    ; |ssd|PS.ab~0     ; out0             ;
+; |ssd|NS.b       ; |ssd|NS.b        ; out0             ;
+; |ssd|PS.b~0     ; |ssd|PS.b~0      ; out0             ;
+; |ssd|NS.bc      ; |ssd|NS.bc       ; out0             ;
+; |ssd|PS.bc~0    ; |ssd|PS.bc~0     ; out0             ;
+; |ssd|NS.c       ; |ssd|NS.c        ; out0             ;
+; |ssd|PS.c~0     ; |ssd|PS.c~0      ; out0             ;
+; |ssd|NS.cd      ; |ssd|NS.cd       ; out0             ;
+; |ssd|PS.cd~0    ; |ssd|PS.cd~0     ; out0             ;
+; |ssd|NS.d       ; |ssd|NS.d        ; out0             ;
+; |ssd|PS.d~0     ; |ssd|PS.d~0      ; out0             ;
+; |ssd|NS.de      ; |ssd|NS.de       ; out0             ;
+; |ssd|PS.de~0    ; |ssd|PS.de~0     ; out0             ;
+; |ssd|NS.e       ; |ssd|NS.e        ; out0             ;
+; |ssd|PS.e~0     ; |ssd|PS.e~0      ; out0             ;
+; |ssd|NS.ef      ; |ssd|NS.ef       ; out0             ;
+; |ssd|PS.ef~0    ; |ssd|PS.ef~0     ; out0             ;
+; |ssd|PS.f~0     ; |ssd|PS.f~0      ; out0             ;
+; |ssd|PS~41      ; |ssd|PS~41       ; out0             ;
+; |ssd|PS~45      ; |ssd|PS~45       ; out0             ;
+; |ssd|Add0~0     ; |ssd|Add0~0      ; out0             ;
+; |ssd|Add0~1     ; |ssd|Add0~1      ; out0             ;
+; |ssd|Add0~2     ; |ssd|Add0~2      ; out0             ;
+; |ssd|Equal0~0   ; |ssd|Equal0~0    ; out0             ;
+; |ssd|Equal1~0   ; |ssd|Equal1~0    ; out0             ;
++-----------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------+
+; Missing 1-Value Coverage                           ;
++--------------+------------------+------------------+
+; Node Name    ; Output Port Name ; Output Port Type ;
++--------------+------------------+------------------+
+; |ssd|PS~0    ; |ssd|PS~0        ; out              ;
+; |ssd|PS~11   ; |ssd|PS~11       ; out              ;
+; |ssd|PS.a    ; |ssd|PS.a        ; regout           ;
+; |ssd|PS.f    ; |ssd|PS.f        ; regout           ;
+; |ssd|PS.fa   ; |ssd|PS.fa       ; regout           ;
+; |ssd|dout~2  ; |ssd|dout~2      ; out0             ;
+; |ssd|dout[0] ; |ssd|dout[0]     ; pin_out          ;
+; |ssd|PS.a~0  ; |ssd|PS.a~0      ; out0             ;
+; |ssd|NS.ab   ; |ssd|NS.ab       ; out0             ;
+; |ssd|NS.fa   ; |ssd|NS.fa       ; out0             ;
+; |ssd|PS.fa~0 ; |ssd|PS.fa~0     ; out0             ;
+; |ssd|NS.a    ; |ssd|NS.a        ; out0             ;
++--------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------+
+; Missing 0-Value Coverage                           ;
++--------------+------------------+------------------+
+; Node Name    ; Output Port Name ; Output Port Type ;
++--------------+------------------+------------------+
+; |ssd|PS~11   ; |ssd|PS~11       ; out              ;
+; |ssd|PS.ef   ; |ssd|PS.ef       ; regout           ;
+; |ssd|PS.f    ; |ssd|PS.f        ; regout           ;
+; |ssd|PS.fa   ; |ssd|PS.fa       ; regout           ;
+; |ssd|WideOr0 ; |ssd|WideOr0     ; out0             ;
+; |ssd|dout[5] ; |ssd|dout[5]     ; pin_out          ;
+; |ssd|dout[6] ; |ssd|dout[6]     ; pin_out          ;
+; |ssd|NS.f    ; |ssd|NS.f        ; out0             ;
+; |ssd|NS.fa   ; |ssd|NS.fa       ; out0             ;
+; |ssd|PS.fa~0 ; |ssd|PS.fa~0     ; out0             ;
+; |ssd|NS.a    ; |ssd|NS.a        ; out0             ;
++--------------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Dec 01 12:54:04 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off ssd -c ssd
+Info: Using vector source file "C:/Labdigital/ssd/ssd.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "NS" in design.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      79.27 %
+Info: Number of transitions in simulation is 791
+Info: Quartus II Simulator was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 158 megabytes
+    Info: Processing ended: Sun Dec 01 12:54:04 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
